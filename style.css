@@ -1,5 +1,14 @@
 @media (max-width: 768px) {
-  
+  #hero {
+    background-image: url('img/background4.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #bg1, #bg2 {
+    display: none !important;
+  }
+
   h1 {
     font-size: 48px !important;
     line-height: 1.2;
