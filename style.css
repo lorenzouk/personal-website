@@ -510,3 +510,29 @@ button:active {
   stroke: black;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.bg-slide.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.work-overlay {
+  position: relative;
+  z-index: 2;
+  background: #00000080;
+}
