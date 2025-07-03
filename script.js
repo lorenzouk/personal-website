@@ -7,9 +7,22 @@ const images = [
 ];
 
 let index = 0;
-const hero = document.getElementById('hero');
+const bg1 = document.getElementById('bg1');
+const bg2 = document.getElementById('bg2');
+
+bg1.style.backgroundImage = `url('${images[0]}')`;
+bg1.classList.add('visible');
 
 setInterval(() => {
   index = (index + 1) % images.length;
-  hero.style.backgroundImage = `url('${images[index]}')`;
+
+  if (bg1.classList.contains('visible')) {
+    bg2.style.backgroundImage = `url('${images[index]}')`;
+    bg2.classList.add('visible');
+    bg1.classList.remove('visible');
+  } else {
+    bg1.style.backgroundImage = `url('${images[index]}')`;
+    bg1.classList.add('visible');
+    bg2.classList.remove('visible');
+  }
 }, 5000);
