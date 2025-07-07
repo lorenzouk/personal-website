@@ -328,7 +328,7 @@ button:active {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .alanai img {
@@ -340,6 +340,20 @@ button:active {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.research {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.research img {
+  width: 75px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
 .experience-grid {
   display: flex;
   flex-wrap: wrap;
