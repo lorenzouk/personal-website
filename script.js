@@ -4,6 +4,12 @@ const images = [
   'img/background3.jpeg',
   'img/background4.jpg',
   'img/background5.jpg',
+  'img/background6.JPG',
+  'img/background7.JPG',
+  'img/background8.JPG',
+  'img/background9.JPG',
+  'img/background10.JPG',
+  'img/background11.JPG'
 ];
 
 let index = 0;

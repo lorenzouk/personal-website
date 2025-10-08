@@ -19,7 +19,9 @@
     word-wrap: break-word;
     line-height: 1.4;
     margin-bottom: 1rem;
-  } 
+  }
+
+
 
   /* Navbar */
   .navbar {
@@ -69,8 +71,17 @@
     margin: 0 auto;
   }
 
+  .experience-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .experience-grid .box {
-    max-width: 220px;
+    max-width: 190px;
     width: 100%;
     padding: 15px;
     margin: 10px auto;
@@ -89,6 +100,12 @@
   }
 
   .research {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pilotCity {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -266,8 +283,9 @@ p {
   margin: 0 auto;
   background: #fff;
 }
+
 .button-wrapper {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 /* Button Styles */
@@ -359,6 +377,22 @@ button:active {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.pilotCity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.pilotCity img {
+  width: 75px;
+  height: auto;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .experience-grid {
   display: flex;
   flex-wrap: wrap;
@@ -400,7 +434,7 @@ button:active {
 
 .box {
   color: black;
-  width: 253px;
+  width: 190px;
   padding: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
