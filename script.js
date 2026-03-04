@@ -1,15 +1,15 @@
 const images = [
-  'img/background1.jpeg',
-  'img/background2.jpeg',
-  'img/background3.jpeg',
-  'img/background4.jpg',
-  'img/background5.jpg',
-  'img/background6.JPG',
-  'img/background7.JPG',
-  'img/background8.JPG',
-  'img/background9.JPG',
-  'img/background10.JPG',
-  'img/background11.JPG'
+  'img/backgrounds/background1.jpeg',
+  'img/backgrounds/background2.jpeg',
+  'img/backgrounds/background3.jpeg',
+  'img/backgrounds/background4.jpg',
+  'img/backgrounds/background5.jpg',
+  'img/backgrounds/background6.JPG',
+  'img/backgrounds/background7.JPG',
+  'img/backgrounds/background8.JPG',
+  'img/backgrounds/background9.JPG',
+  'img/backgrounds/background10.JPG',
+  'img/backgrounds/background11.JPG'
 ];
 
 // Preload images

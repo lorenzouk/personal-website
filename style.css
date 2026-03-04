@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
   #hero {
-    background-image: url('img/background4.jpg') !important;
+    background-image: url('img/backgrounds/background4.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
   }
@@ -659,7 +659,7 @@ button:active {
 .work-background {
   position: relative;
   overflow: hidden;
-  background: url('img/background1.jpeg')no-repeat center center;
+  background: url('img/backgrounds/background1.jpeg')no-repeat center center;
   background-size: cover;
   transition: background-image 1s ease-in-out;
 }
