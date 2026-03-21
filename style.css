@@ -34,7 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 6px 8px;
+    padding: clamp(4px, 1.2vw, 6px) clamp(4px, 1.8vw, 8px);
     background-color: black;
     z-index: 1000;
     overflow-x: hidden;
@@ -47,15 +47,15 @@
   }
 
   .logo {
-    height: 14px;
+    height: clamp(11px, 3vw, 14px);
   }
 
   .navbar a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 6px;
-    font-size: 12px;
+    padding: clamp(6px, 1.5vw, 8px) clamp(4px, 1.4vw, 6px);
+    font-size: clamp(10px, 2.3vw, 12px);
     text-align: center;
     white-space: nowrap;
   }
@@ -132,8 +132,10 @@
   .work-carousel {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 0 4px;
+    gap: 8px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .work-nav {
@@ -150,14 +152,16 @@
     transition: transform 0.4s ease;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 8px 2px 14px;
+    width: 100%;
+    padding: 8px 0 14px;
   }
 
   .content-box {
     position: relative;
-    flex: 0 0 76%;
-    max-width: 280px;
-    min-width: 220px;
+    flex: 0 0 min(82%, 280px);
+    width: min(82%, 280px);
+    max-width: min(82%, 280px);
+    min-width: 0;
     padding: 12px;
     border: 2px solid #444;
     border-radius: 10px;
@@ -166,7 +170,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     scroll-snap-align: center;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .content-box h2 {
@@ -258,6 +262,17 @@
     padding: 30px;
   }
 
+  .socials {
+    gap: clamp(14px, 4vw, 24px);
+    padding: clamp(10px, 2.8vw, 14px);
+  }
+
+  .socials svg,
+  .socials img.social-icon {
+    width: clamp(26px, 7vw, 34px);
+    height: clamp(26px, 7vw, 34px);
+  }
+
   /* Buttons */
   button {
     width: 100%;
@@ -267,30 +282,31 @@
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 6px 4px;
+    padding: clamp(3px, 1vw, 5px) clamp(3px, 1.2vw, 4px);
   }
 
   .navbar a {
-    padding: 7px 4px;
-    font-size: 11px;
+    padding: clamp(5px, 1.3vw, 7px) clamp(3px, 1vw, 4px);
+    font-size: clamp(8px, 2.8vw, 11px);
   }
 
   .logo {
-    height: 12px;
+    height: clamp(9px, 3vw, 12px);
   }
 
   .work-overlay {
-    padding: 50px 18px;
+    padding: 50px 12px;
   }
 
   .work-track {
-    gap: 12px;
+    gap: 10px;
   }
 
   .content-box {
-    flex-basis: 72%;
-    min-width: 200px;
-    max-width: 250px;
+    flex-basis: min(88%, 220px);
+    width: min(88%, 220px);
+    min-width: 0;
+    max-width: min(88%, 220px);
     padding: 10px;
   }
 
@@ -306,6 +322,17 @@
     width: 100%;
     min-height: 38px;
     font-size: 12px;
+  }
+
+  .socials {
+    gap: clamp(10px, 3.5vw, 16px);
+    padding: clamp(8px, 2.5vw, 12px);
+  }
+
+  .socials svg,
+  .socials img.social-icon {
+    width: clamp(22px, 7vw, 28px);
+    height: clamp(22px, 7vw, 28px);
   }
 }
 
@@ -1016,6 +1043,7 @@ button:active {
   min-width: 320px;
   max-width: 440px;
   padding: 24px;
+  box-sizing: border-box;
   border: 2px solid #444;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -1200,5 +1228,140 @@ button:active {
 .bg-slide.visible {
   opacity: 1;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: clamp(5px, 1.5vw, 8px) clamp(6px, 2.2vw, 12px);
+  }
+
+  .logo {
+    height: clamp(13px, 3.6vw, 18px);
+  }
+
+  .navbar a {
+    padding: clamp(7px, 1.9vw, 10px) clamp(6px, 1.9vw, 10px);
+    font-size: clamp(11px, 2.7vw, 15px);
+  }
+
+  .work-carousel,
+  .work-track {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .work-track {
+    gap: 12px;
+    padding: 8px 0 14px;
+  }
+
+  .content-box {
+    flex: 0 0 min(82%, 360px);
+    width: min(82%, 360px);
+    max-width: min(82%, 360px);
+    min-width: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .project-date {
+    top: 6px;
+    right: 10px;
+    font-size: 0.8rem;
+  }
+
+  .experience-grid .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .experience-icons svg,
+  .experience-icons .icon-img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .socials {
+    gap: clamp(14px, 4vw, 24px);
+    padding: clamp(10px, 2.8vw, 14px);
+  }
+
+  .socials svg,
+  .socials img.social-icon {
+    width: clamp(26px, 7vw, 34px);
+    height: clamp(26px, 7vw, 34px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: clamp(4px, 1.2vw, 6px) clamp(4px, 1.6vw, 7px);
+  }
+
+  .navbar a {
+    padding: clamp(6px, 1.7vw, 8px) clamp(4px, 1.3vw, 6px);
+    font-size: clamp(10px, 3.2vw, 13px);
+  }
+
+  .logo {
+    height: clamp(11px, 3.4vw, 14px);
+  }
+
+  .work-overlay {
+    padding: 50px 12px;
+  }
+
+  .content-box {
+    flex: 0 0 min(86%, 300px);
+    width: min(86%, 300px);
+    max-width: min(86%, 300px);
+    padding: 10px;
+  }
+
+  .content-box h2 {
+    font-size: 15px;
+  }
+
+  .content-box p {
+    font-size: 12px;
+  }
+
+  .project-link {
+    width: 100%;
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .experience-icons {
+    gap: 12px;
+    max-width: 220px;
+  }
+
+  .experience-icons svg,
+  .experience-icons .icon-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .socials {
+    gap: clamp(10px, 3.5vw, 16px);
+    padding: clamp(8px, 2.5vw, 12px);
+  }
+
+  .socials svg,
+  .socials img.social-icon {
+    width: clamp(22px, 7vw, 28px);
+    height: clamp(22px, 7vw, 28px);
+  }
 }
 
