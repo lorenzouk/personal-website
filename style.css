@@ -702,8 +702,7 @@ button:active {
   z-index: -1;
 }
 
-.work-nav:hover:before,
-.work-nav:focus:before {
+.work-nav:hover:before {
   left: 0;
   right: 0;
   opacity: 1;
