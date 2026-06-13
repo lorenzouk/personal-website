@@ -1,3 +1,23 @@
+const roles = ['Game Developer', 'Software Engineer'];
+const roleText = document.getElementById('roleText');
+
+if (roleText) {
+  let roleIndex = 0;
+
+  const updateRole = () => {
+    roleText.classList.remove('show');
+
+    setTimeout(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      roleText.textContent = roles[roleIndex];
+      roleText.classList.add('show');
+    }, 220);
+  };
+
+  setInterval(updateRole, 3000);
+  updateRole();
+}
+
 const images = [
   'img/backgrounds/background1.jpeg',
   'img/backgrounds/background2.jpeg',

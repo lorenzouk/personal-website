@@ -1,4 +1,20 @@
 /* Global Styles */
+@font-face {
+  font-family: 'Cyber Blast';
+  src: url('Cyber Blast.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gakuran Demo';
+  src: url('Gakuran-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,14 +39,84 @@ body {
 
 /* Typography */
 h1 {
-  font-size: 90px;
+  font-size: 160px;
   margin-bottom: 1px;
+  text-shadow:
+    0 1px 0 #ff7d7d,
+    0 2px 0 #e65858,
+    0 3px 0 #c82f2f,
+    0 4px 0 #990d0d,
+    0 10px 18px rgba(0, 0, 0, 0.50),
+    0 16px 28px rgba(0, 0, 0, 0.40),
+    0 24px 40px rgba(0, 0, 0, 0.30);
+  transform: perspective(500px) rotateX(6deg) rotateY(-2deg);
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 0;
   line-height: 1.2;
+}
+
+.cyber-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Gakuran Demo', 'Cyber Blast', 'Raleway', sans-serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff2a2a;
+  text-shadow:
+    0 0 1px #000000,
+    0 0 4px #ff6b6b,
+    0 0 8px rgba(255, 26, 26, 0.35),
+    0 1px 0 #000000,
+    0 2px 0 #000000,
+    0 3px 0 #000000,
+    0 10px 18px rgba(0, 0, 0, 0.60),
+    0 16px 28px rgba(0, 0, 0, 0.45);
+}
+
+.role-prefix {
+  color: #d9f6ff;
+}
+
+.role-text {
+  display: inline-block;
+  min-width: 290px;
+  color: #ff2a2a;
+  font-family: 'Gakuran Demo', 'Cyber Blast', 'Raleway', sans-serif;
+  text-shadow:
+    0 0 1px #000000,
+    0 0 4px #ff6b6b,
+    0 0 8px rgba(255, 26, 26, 0.35),
+    0 1px 0 #000000,
+    0 2px 0 #000000,
+    0 3px 0 #000000,
+    0 10px 18px rgba(0, 0, 0, 0.60),
+    0 16px 28px rgba(0, 0, 0, 0.45);
+  transform: perspective(700px) rotateX(6deg) rotateY(-2deg);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.role-text.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.role-text:not(.show) {
+  opacity: 0;
+  transform: translateY(8px) scale(0.97);
+}
+
+.role-cursor {
+  color: #ffffff;
+  animation: cursorBlink 1s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+  50% { opacity: 0; }
 }
 
 h3 {
@@ -110,7 +196,7 @@ p {
 .overlay {
   width: 100%;
   height: 100%;
-  background: #00000080;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75));
 }
 
 .name-text {
@@ -120,6 +206,26 @@ p {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  line-height: 0.9;
+}
+
+.name-text h1 {
+  font-family: 'Cyber Blast', 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  text-shadow:
+    0 2px 0 #ffbfbf,
+    0 4px 0 #ff8c8c,
+    0 6px 0 #f04d4d,
+    0 8px 0 #d81c1c,
+    0 12px 20px rgba(0, 0, 0, 0.60),
+    0 20px 34px rgba(0, 0, 0, 0.42),
+    0 28px 46px rgba(0, 0, 0, 0.30);
+  transform: perspective(700px) rotateX(8deg) rotateY(-3deg);
+}
+
+.name-text .cyber-role {
+  margin-top: -6px;
 }
 
 /* About Section */
