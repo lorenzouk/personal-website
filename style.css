@@ -1,7 +1,7 @@
 /* Global Styles */
 @font-face {
   font-family: 'Cyber Blast';
-  src: url('Cyber Blast.otf') format('opentype');
+  src: url('/fonts/Cyber Blast.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,23 @@
 
 @font-face {
   font-family: 'Gakuran Demo';
-  src: url('Gakuran-Demo.otf') format('opentype');
+  src: url('/fonts/Gakuran-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FFFFORWA';
+  src: url('/fonts/FFFFORWA.TTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MedodicaRegular';
+  src: url('/fonts/MedodicaRegular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,7 +37,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'MedodicaRegular', sans-serif;
 }
 
 /* Logo Styles */
@@ -62,7 +78,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Gakuran Demo', 'Cyber Blast', 'Raleway', sans-serif;
+  font-family: 'Gakuran Demo', 'Cyber Blast', sans-serif;
   font-size: 50px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -86,7 +102,7 @@ h2 {
   display: inline-block;
   min-width: 290px;
   color: #ff2a2a;
-  font-family: 'Gakuran Demo', 'Cyber Blast', 'Raleway', sans-serif;
+  font-family: 'Gakuran Demo', 'Cyber Blast', sans-serif;
   text-shadow:
     0 0 1px #000000,
     0 0 4px #ff6b6b,
@@ -120,9 +136,10 @@ h2 {
 }
 
 h3 {
-  font-size: 40px;
-  margin-top: 10px;
-  line-height: 0;
+  font-size: 30px;
+  font-family: 'FFFFORWA', sans-serif;
+  margin-top: 0px;
+  line-height: 40px;
 }
 
 h4 {
@@ -145,7 +162,7 @@ h5 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 /* Navbar */
@@ -199,9 +216,29 @@ p {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75));
 }
 
+.name-layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 0 8%;
+  box-sizing: border-box;
+}
+
+.hero-photo {
+  width: 360px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.55));
+  opacity: 0.95;
+  margin-top: 100px;
+}
+
 .name-text {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -210,7 +247,7 @@ p {
 }
 
 .name-text h1 {
-  font-family: 'Cyber Blast', 'Raleway', sans-serif;
+  font-family: 'Cyber Blast', sans-serif;
   letter-spacing: 2px;
   margin-bottom: 0;
   text-shadow:
@@ -293,7 +330,7 @@ p {
 /* Button Styles */
 button {
   font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'FFFFORWA', sans-serif;
   letter-spacing: 2px;
   font-weight: bold;
   text-align: center;
