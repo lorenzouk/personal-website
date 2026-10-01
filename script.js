@@ -49,23 +49,6 @@ document.querySelectorAll('.content-box').forEach(box => {
     });
   }
 
-  if (!isMicroprojectsPage && image) {
-    const animatedSrc = image.dataset.animatedSrc;
-    const staticSrc = image.dataset.staticSrc || image.getAttribute('src');
-
-    box.addEventListener('mouseenter', () => {
-      if (animatedSrc) {
-        image.src = animatedSrc;
-      }
-    });
-
-    box.addEventListener('mouseleave', () => {
-      if (staticSrc) {
-        image.src = staticSrc;
-      }
-    });
-  }
-
   // Make project card clickable
   const cardClickHref = box.dataset.cardHref;
   if (!isMicroprojectsPage && cardClickHref) {
@@ -80,7 +63,7 @@ document.querySelectorAll('.content-box').forEach(box => {
 });
 
 const projectNavLinks = document.querySelectorAll('.project-side-nav a');
-const projectCards = document.querySelectorAll('.featured-project-card');
+const projectCards = document.querySelectorAll('.featured-project-card, .content-box[id]');
 
 if (projectNavLinks.length && projectCards.length) {
   const setActiveProjectLink = () => {

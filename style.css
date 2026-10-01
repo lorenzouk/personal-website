@@ -1,11 +1,11 @@
 /* Base */
 body {
   margin: 0;
+  background-color: black;
 }
 
 /* Logo */
 .home {
-  margin-right: auto;
   display: flex;
   align-items: center;
 }
@@ -136,6 +136,7 @@ p {
   background-color: black;
   box-sizing: border-box;
   display: flex;
+  justify-content: center;
   padding: 2px 15px;
   width: 100%;
   z-index: 1000;
@@ -668,7 +669,7 @@ footer {
 
 /* Projects */
 .projects-page {
-  background: #171717;
+  background: #000;
   scroll-behavior: smooth;
 }
 
@@ -725,6 +726,14 @@ footer {
 .project-showcase .projects-overlay {
   background: rgba(10, 10, 10, 0.82);
   padding: 50px 8%;
+}
+
+.microprojects-page .content-box {
+  scroll-margin-top: 90px;
+}
+
+.microprojects-page .content-box + .content-box {
+  margin-top: 24px;
 }
 
 .projects-background {
