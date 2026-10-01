@@ -764,6 +764,7 @@ footer {
 
 .featured-project-card {
   width: min(1040px, 100%);
+  box-sizing: border-box;
   margin: 0 auto 42px;
   padding: 22px 22px 18px;
   background: #ffffff;
@@ -1046,4 +1047,329 @@ footer {
 .showcase-section .tile-mapping-zoom {
   transform: scale(3);
   transform-origin: center;
+}
+
+@media (max-width: 800px) {
+  .projects-page .project-side-nav {
+    display: none;
+  }
+
+  .project-showcase .projects-overlay {
+    padding: 82px 5% 36px;
+  }
+
+  .projects-text {
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  .projects-text h1 {
+    font-size: clamp(2.5rem, 10vw, 4.75rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
+
+  .projects-text p {
+    max-width: 42rem;
+    margin: 16px auto 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.5;
+  }
+
+  .featured-project-card {
+    padding: 18px;
+  }
+
+  .featured-project-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .featured-project-card .project-role {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .project-tech-icons {
+    justify-content: flex-start;
+    align-self: stretch;
+  }
+
+  .featured-images {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .featured-images img,
+  .featured-images video {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .detail-block {
+    padding: 16px;
+  }
+
+  .content-box {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .content-box-split {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .content-box-split .showcase-section {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .content-box-split .contents {
+    width: 100%;
+  }
+
+  .content-box-split .project-icons {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+
+  .content-box-split .project-icons .icon-img {
+    width: 28px;
+  }
+
+  .content-box h2 {
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
+    overflow-wrap: anywhere;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .projects-track .content-box + .content-box,
+  .microprojects-page .content-box + .content-box {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .navbar {
+    justify-content: center;
+    gap: 14px;
+    padding: 2px 6px;
+  }
+
+  .navbar a,
+  .navbar .nav-link {
+    padding: 12px 6px;
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    height: 18px;
+  }
+
+  .name {
+    height: min(80vw, 373px);
+  }
+
+  .name-layout {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .name-text {
+    top: 55%;
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .name-text h1 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+
+  .hero-photo {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    width: min(60vw, 220px) !important;
+    max-height: 100%;
+    margin-top: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0.78;
+    z-index: 0;
+  }
+
+  .name-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .role-text {
+    margin: 6px 0 0;
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .bio-section {
+    padding: 28px 16px;
+  }
+
+  .bio-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    padding: 12px 0;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  h3 {
+    margin-left: 0;
+  }
+
+  .tech-stack {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+  }
+
+  .tech-icons {
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    justify-items: center;
+    gap: 14px 8px;
+  }
+
+  .tech-icons img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .projects-overlay {
+    padding: 38px 14px;
+  }
+
+  .projects-text {
+    margin: 0 auto 24px;
+  }
+
+  .projects-text h1 {
+    font-size: clamp(2.3rem, 11vw, 4rem);
+  }
+
+  .projects-text p {
+    font-size: 1rem;
+  }
+
+  .project-showcase .projects-overlay {
+    padding: 78px 14px 28px;
+  }
+
+  .project-showcase .projects-text {
+    margin-bottom: 24px;
+  }
+
+  .content-box {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .content-box-split {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .content-box-split .showcase-section {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .content-box-split .contents {
+    width: 100%;
+  }
+
+  .content-box-split .project-icons {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+
+  .content-box-split .project-icons .icon-img {
+    width: 28px;
+  }
+
+  .content-box h2 {
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
+    overflow-wrap: anywhere;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .projects-track .content-box + .content-box,
+  .microprojects-page .content-box + .content-box {
+    margin-top: 16px;
+  }
+
+  .featured-project-card h2 {
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+    overflow-wrap: anywhere;
+  }
+
+  .detail-block p,
+  .detail-block li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .project-actions {
+    gap: 10px;
+  }
+
+  .project-link {
+    min-height: 44px;
+    padding: 0.65em 1em;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .socials {
+    gap: 14px;
+  }
+
+  .copyright {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
 }
